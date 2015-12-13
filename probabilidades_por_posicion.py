@@ -8,6 +8,7 @@ import collections
 # Inicializo matrices
 probabilidades = np.loadtxt('probabilidades.txt')
 probabilidades = np.reshape(probabilidades.T, (10,10,3), order='F')
+probabilidades = np.swapaxes(probabilidades, 0, 1)
 puntajesIniciales = getPuntajesIniciales()
 
 # Corro simulacion

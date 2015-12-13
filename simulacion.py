@@ -8,14 +8,16 @@ def simulacion(puntajes, probabilidades, iteraciones):
     histograma = np.zeros((10,10))
     resultados = np.array([[3,0],[0,3],[1,1]]);
 
+    # Obtengo partidos no jugados (los que la suma de puntajes da 0)
+    no_jugados = np.nonzero(np.sum(puntajes, axis=2) == 0)
+
     for i in range(0,iteraciones):
         puntajes_copia = puntajes.copy()
 
         # Random ponderado en partidos no jugados
-        no_jugados = np.nonzero(np.sum(puntajes_copia, axis=2) == 0)
         for x in range(0,len(no_jugados[0])):
             if (no_jugados[0][x]!=no_jugados[1][x]):
-                puntajes_copia[no_jugados[0][x],no_jugados[1][x]] = resultados[np.random.choice(3, 1, p = probabilidades[no_jugados[1][x],no_jugados[0][x]])]
+                puntajes_copia[no_jugados[0][x],no_jugados[1][x]] = resultados[np.random.choice(3, 1, p = probabilidades[no_jugados[0][x],no_jugados[1][x]])]
 
         puntajes_local = np.sum(puntajes_copia, axis=1)[:,0]
         puntajes_visitante = np.sum(puntajes_copia, axis=0)[:,1]
