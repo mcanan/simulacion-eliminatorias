@@ -6,8 +6,8 @@ paises = {"Argentina":0, "Bolivia":1, "Brasil":2, "Chile":3, "Colombia":4,
 def simulacion(puntajes, probabilidades, iteraciones):
     posiciones = np.zeros((10,iteraciones),dtype=np.int)
     histograma = np.zeros((10,10))
-    resultados = np.array([[3,0],[0,3],[1,1]]);
-
+    resultados = np.array([[3,0],[0,3],[1,1]]); # [gana local, gana visitante, empate]
+    
     # Obtengo partidos no jugados (los que la suma de puntajes da 0)
     no_jugados = np.nonzero(np.sum(puntajes, axis=2) == 0)
 
@@ -16,9 +16,9 @@ def simulacion(puntajes, probabilidades, iteraciones):
 
         # Random ponderado en partidos no jugados
         for x in range(0,len(no_jugados[0])):
-            if (no_jugados[0][x]!=no_jugados[1][x]):
+            if (no_jugados[0][x]!=no_jugados[1][x]): # Si local y visitante son diferentes
                 puntajes_copia[no_jugados[0][x],no_jugados[1][x]] = resultados[np.random.choice(3, 1, p = probabilidades[no_jugados[0][x],no_jugados[1][x]])]
-
+                     
         puntajes_local = np.sum(puntajes_copia, axis=1)[:,0]
         puntajes_visitante = np.sum(puntajes_copia, axis=0)[:,1]
         total = puntajes_local + puntajes_visitante
@@ -65,4 +65,9 @@ def getPuntajesIniciales():
     puntajes[paises["Paraguay"],paises["Bolivia"]]=[3,0]
     puntajes[paises["Brasil"],paises["Peru"]]=[3,0]
 
+    puntajes[paises["Bolivia"],paises["Colombia"]]=[0,3]
+    puntajes[paises["Ecuador"],paises["Paraguay"]]=[1,1]
+    puntajes[paises["Chile"],paises["Argentina"]]=[0,3]
+    puntajes[paises["Peru"],paises["Venezuela"]]=[1,1]
+    puntajes[paises["Brasil"],paises["Uruguay"]]=[1,1]
     return puntajes
