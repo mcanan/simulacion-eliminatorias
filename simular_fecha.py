@@ -8,7 +8,6 @@ import collections
 probabilidades = np.loadtxt('probabilidades.txt')
 probabilidades = np.reshape(probabilidades.T, (10,10,3), order='F')
 probabilidades = np.swapaxes(probabilidades, 0, 1)
-puntajes = getPuntajesIniciales()
 
 partidosFecha = np.array([
     [paises["Colombia"],paises["Ecuador"]],
@@ -29,10 +28,11 @@ paisesOrdenados.sort()
 for partido in partidosFecha:
     for resultado in resultados:
         print paisesOrdenados[partido[0]], paisesOrdenados[partido[1]], resultado
-        
+        puntajes = getPuntajesIniciales()
         puntajes[partido[0],partido[1]] = resultado
+        
         # Corro simulacion
-        histograma = simulacion(puntajes, probabilidades, 1000)
+        histograma = simulacion(puntajes, probabilidades, 20000)
 
         # Suma las probabilidades de estar en los primeros 5 puestos
         probabilidades_5_primeros = np.sum(histograma[:5,:], axis=0)
@@ -44,7 +44,4 @@ for partido in partidosFecha:
         
         print ''
         print " <=5", probabilidades_5_primeros
-        print "  >5", 1-probabilidades_5_primeros
-        print ''
         print " <=4", probabilidades_4_primeros
-        print "  >4", 1-probabilidades_4_primeros

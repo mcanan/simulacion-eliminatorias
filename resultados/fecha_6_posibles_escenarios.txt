@@ -1,0 +1,60 @@
+Colombia Ecuador [3 0]
+        ARG   BOL   BRA   CHI   COL   ECU   PAR   PER   URU   VEN   
+ <=5 [ 0.86  0.01  0.86  0.75  0.53  0.91  0.42  0.01  0.64  0.02]
+ <=4 [ 0.75  0.    0.73  0.6   0.35  0.81  0.28  0.    0.47  0.01]
+Colombia Ecuador [0 3]
+        ARG   BOL   BRA   CHI   COL   ECU   PAR   PER   URU   VEN   
+ <=5 [ 0.89  0.01  0.88  0.79  0.26  0.98  0.46  0.01  0.69  0.02]
+ <=4 [ 0.77  0.    0.75  0.62  0.13  0.95  0.29  0.    0.49  0.01]
+Colombia Ecuador [1 1]
+        ARG   BOL   BRA   CHI   COL   ECU   PAR   PER   URU   VEN   
+ <=5 [ 0.88  0.01  0.88  0.78  0.35  0.95  0.45  0.01  0.68  0.02]
+ <=4 [ 0.77  0.    0.74  0.61  0.19  0.88  0.29  0.    0.49  0.01]
+Uruguay Peru [3 0]
+        ARG   BOL   BRA   CHI   COL   ECU   PAR   PER   URU   VEN   
+ <=5 [ 0.86  0.01  0.84  0.75  0.45  0.91  0.41  0.    0.75  0.02]
+ <=4 [ 0.75  0.    0.71  0.58  0.29  0.82  0.27  0.    0.58  0.01]
+Uruguay Peru [0 3]
+        ARG   BOL   BRA   CHI   COL   ECU   PAR   PER   URU   VEN   
+ <=5 [ 0.89  0.01  0.88  0.78  0.52  0.93  0.46  0.02  0.5   0.02]
+ <=4 [ 0.79  0.    0.75  0.63  0.33  0.85  0.31  0.01  0.32  0.01]
+Uruguay Peru [1 1]
+        ARG   BOL   BRA   CHI   COL   ECU   PAR   PER   URU   VEN   
+ <=5 [ 0.88  0.01  0.87  0.77  0.5   0.93  0.45  0.    0.59  0.02]
+ <=4 [ 0.77  0.    0.74  0.62  0.32  0.84  0.29  0.    0.4   0.01]
+Argentina Bolivia [3 0]
+        ARG   BOL   BRA   CHI   COL   ECU   PAR   PER   URU   VEN   
+ <=5 [ 0.91  0.    0.86  0.75  0.47  0.92  0.42  0.01  0.64  0.02]
+ <=4 [ 0.82  0.    0.72  0.59  0.3   0.83  0.27  0.    0.46  0.01]
+Argentina Bolivia [0 3]
+        ARG   BOL   BRA   CHI   COL   ECU   PAR   PER   URU   VEN   
+ <=5 [ 0.76  0.02  0.87  0.77  0.51  0.92  0.45  0.01  0.67  0.02]
+ <=4 [ 0.61  0.01  0.75  0.63  0.34  0.85  0.3   0.    0.5   0.01]
+Argentina Bolivia [1 1]
+        ARG   BOL   BRA   CHI   COL   ECU   PAR   PER   URU   VEN   
+ <=5 [ 0.83  0.01  0.86  0.77  0.49  0.92  0.44  0.01  0.66  0.02]
+ <=4 [ 0.69  0.    0.74  0.62  0.32  0.84  0.29  0.    0.48  0.01]
+Venezuela Chile [3 0]
+        ARG   BOL   BRA   CHI   COL   ECU   PAR   PER   URU   VEN   
+ <=5 [ 0.88  0.01  0.88  0.56  0.52  0.93  0.46  0.01  0.68  0.07]
+ <=4 [ 0.79  0.    0.77  0.38  0.34  0.86  0.31  0.    0.51  0.03]
+Venezuela Chile [0 3]
+        ARG   BOL   BRA   CHI   COL   ECU   PAR   PER   URU   VEN   
+ <=5 [ 0.87  0.01  0.86  0.79  0.48  0.91  0.42  0.01  0.64  0.01]
+ <=4 [ 0.76  0.    0.73  0.64  0.3   0.82  0.27  0.    0.46  0.  ]
+Venezuela Chile [1 1]
+        ARG   BOL   BRA   CHI   COL   ECU   PAR   PER   URU   VEN   
+ <=5 [ 0.88  0.01  0.88  0.65  0.5   0.92  0.45  0.01  0.67  0.03]
+ <=4 [ 0.78  0.    0.76  0.47  0.33  0.85  0.3   0.    0.5   0.01]
+Paraguay Brasil [3 0]
+        ARG   BOL   BRA   CHI   COL   ECU   PAR   PER   URU   VEN   
+ <=5 [ 0.86  0.01  0.81  0.75  0.47  0.91  0.53  0.01  0.63  0.02]
+ <=4 [ 0.76  0.    0.66  0.6   0.3   0.83  0.37  0.    0.46  0.01]
+Paraguay Brasil [0 3]
+        ARG   BOL   BRA   CHI   COL   ECU   PAR   PER   URU   VEN   
+ <=5 [ 0.88  0.01  0.96  0.77  0.5   0.93  0.27  0.01  0.66  0.02]
+ <=4 [ 0.75  0.    0.89  0.6   0.3   0.83  0.14  0.    0.47  0.01]
+Paraguay Brasil [1 1]
+        ARG   BOL   BRA   CHI   COL   ECU   PAR   PER   URU   VEN   
+ <=5 [ 0.88  0.01  0.89  0.76  0.5   0.93  0.36  0.01  0.66  0.02]
+ <=4 [ 0.76  0.    0.77  0.61  0.31  0.84  0.22  0.    0.48  0.01]
