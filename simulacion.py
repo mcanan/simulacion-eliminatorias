@@ -3,10 +3,11 @@ import numpy as np
 paises = {"Argentina":0, "Bolivia":1, "Brasil":2, "Chile":3, "Colombia":4,
         "Ecuador":5, "Paraguay":6, "Peru":7, "Uruguay":8, "Venezuela":9}
 
+resultados = np.array([[3,0],[0,3],[1,1]]); # [gana local, gana visitante, empate]
+
 def simulacion(puntajes, probabilidades, iteraciones):
     posiciones = np.zeros((10,iteraciones),dtype=np.int)
     histograma = np.zeros((10,10))
-    resultados = np.array([[3,0],[0,3],[1,1]]); # [gana local, gana visitante, empate]
     
     # Obtengo partidos no jugados (los que la suma de puntajes da 0)
     no_jugados = np.nonzero(np.sum(puntajes, axis=2) == 0)
