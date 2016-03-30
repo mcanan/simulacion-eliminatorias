@@ -71,4 +71,11 @@ def getPuntajesIniciales():
     puntajes[paises["Chile"],paises["Argentina"]]=[0,3]
     puntajes[paises["Peru"],paises["Venezuela"]]=[1,1]
     puntajes[paises["Brasil"],paises["Uruguay"]]=[1,1]
+    
+    puntajes[paises["Colombia"],paises["Ecuador"]]=[3,0]
+    puntajes[paises["Uruguay"],paises["Peru"]]=[3,0]
+    puntajes[paises["Argentina"],paises["Bolivia"]]=[3,0]
+    puntajes[paises["Venezuela"],paises["Chile"]]=[0,3]
+    puntajes[paises["Paraguay"],paises["Brasil"]]=[1,1]
+    
     return puntajes
