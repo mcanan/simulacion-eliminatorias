@@ -1,13 +1,8 @@
 from simulacion import *
 import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-import collections
 
 # Inicializo matrices
-probabilidades = np.loadtxt('probabilidades.txt')
-probabilidades = np.reshape(probabilidades.T, (10,10,3), order='F')
-probabilidades = np.swapaxes(probabilidades, 0, 1)
+probabilidades = getProbabilidades('probabilidades.txt')
 
 partidosFecha = np.array([
     [paises["Colombia"],paises["Ecuador"]],
@@ -21,13 +16,9 @@ partidosFecha = np.array([
 np.set_printoptions(precision=2)
 np.set_printoptions(suppress=True)
 
-paisesOrdenados = paises.keys()
-paisesOrdenados.sort()
-
-#paisesOrdenados = collections.OrderedDict(sorted(paises.items()))
 for partido in partidosFecha:
     for resultado in resultados:
-        print paisesOrdenados[partido[0]], paisesOrdenados[partido[1]], resultado
+        print paises.items()[partido[0]][0], paises.items()[partido[1]][0], resultado
         puntajes = getPuntajesIniciales()
         puntajes[partido[0],partido[1]] = resultado
         
@@ -39,7 +30,7 @@ for partido in partidosFecha:
         probabilidades_4_primeros = np.sum(histograma[:4,:], axis=0)
 
         print '       ',
-        for p in collections.OrderedDict(sorted(paises.items())):
+        for p in paises:
             print  '%s  ' % p[:3].upper(),
         
         print ''

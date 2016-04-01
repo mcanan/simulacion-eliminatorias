@@ -1,7 +1,8 @@
 import numpy as np
+from collections import OrderedDict
 
-paises = {"Argentina":0, "Bolivia":1, "Brasil":2, "Chile":3, "Colombia":4,
-        "Ecuador":5, "Paraguay":6, "Peru":7, "Uruguay":8, "Venezuela":9}
+paises = OrderedDict([("Argentina", 0), ("Bolivia", 1), ("Brasil", 2), ("Chile", 3), ("Colombia", 4), ("Ecuador", 5),
+    ("Paraguay", 6), ("Peru", 7), ("Uruguay", 8), ("Venezuela", 9)])
 
 resultados = np.array([[3,0],[0,3],[1,1]]); # [gana local, gana visitante, empate]
 
@@ -33,45 +34,53 @@ def simulacion(puntajes, probabilidades, iteraciones):
     
     return histograma
 
-def getPais(index):
-    for pais, i in paises.iteritems():
-        if i == index:
-            return pais
+def getProbabilidades(archivo):
+    probabilidades = np.loadtxt(archivo)
+    probabilidades = np.reshape(probabilidades.T, (10,10,3), order='F')
+    probabilidades = np.swapaxes(probabilidades, 0, 1)
+    
+    return probabilidades
 
 def getPuntajesIniciales():
     puntajes = np.zeros((10, 10, 2))
 
     # Partidos ya jugados
+    # Fecha 1
     puntajes[paises["Bolivia"],paises["Uruguay"]]=[0,3]
     puntajes[paises["Colombia"],paises["Peru"]]=[3,0]
     puntajes[paises["Venezuela"],paises["Paraguay"]]=[0,3]
     puntajes[paises["Chile"],paises["Brasil"]]=[3,0]
     puntajes[paises["Argentina"],paises["Ecuador"]]=[0,3]
 
+    # Fecha 2
     puntajes[paises["Ecuador"],paises["Bolivia"]]=[3,0]
     puntajes[paises["Uruguay"],paises["Colombia"]]=[3,0]
     puntajes[paises["Paraguay"],paises["Argentina"]]=[1,1]
     puntajes[paises["Brasil"],paises["Venezuela"]]=[3,0]
     puntajes[paises["Peru"],paises["Chile"]]=[0,3]
 
+    # Fecha 3
     puntajes[paises["Bolivia"],paises["Venezuela"]]=[3,0]
     puntajes[paises["Ecuador"],paises["Uruguay"]]=[3,0]
     puntajes[paises["Chile"],paises["Colombia"]]=[1,1]
     puntajes[paises["Argentina"],paises["Brasil"]]=[1,1]
     puntajes[paises["Peru"],paises["Paraguay"]]=[3,0]
 
+    # Fecha 4
     puntajes[paises["Colombia"],paises["Argentina"]]=[0,3]
     puntajes[paises["Venezuela"],paises["Ecuador"]]=[0,3]
     puntajes[paises["Uruguay"],paises["Chile"]]=[3,0]
     puntajes[paises["Paraguay"],paises["Bolivia"]]=[3,0]
     puntajes[paises["Brasil"],paises["Peru"]]=[3,0]
 
+    # Fecha 5
     puntajes[paises["Bolivia"],paises["Colombia"]]=[0,3]
     puntajes[paises["Ecuador"],paises["Paraguay"]]=[1,1]
     puntajes[paises["Chile"],paises["Argentina"]]=[0,3]
     puntajes[paises["Peru"],paises["Venezuela"]]=[1,1]
     puntajes[paises["Brasil"],paises["Uruguay"]]=[1,1]
     
+    # Fecha 6
     puntajes[paises["Colombia"],paises["Ecuador"]]=[3,0]
     puntajes[paises["Uruguay"],paises["Peru"]]=[3,0]
     puntajes[paises["Argentina"],paises["Bolivia"]]=[3,0]

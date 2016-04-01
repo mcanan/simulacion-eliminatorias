@@ -3,12 +3,9 @@ from math import *
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-import collections
 
 # Inicializo matrices
-probabilidades = np.loadtxt('probabilidades.txt')
-probabilidades = np.reshape(probabilidades.T, (10,10,3), order='F')
-probabilidades = np.swapaxes(probabilidades, 0, 1)
+probabilidades = getProbabilidades('probabilidades.txt')
 puntajesIniciales = getPuntajesIniciales()
 
 # Corro simulacion
@@ -18,7 +15,7 @@ histograma = simulacion(puntajesIniciales, probabilidades, 20000)
 np.set_printoptions(precision=2)
 np.set_printoptions(suppress=True)
 print '      ',
-for p in collections.OrderedDict(sorted(paises.items())):
+for p in paises:
     print  '%s  ' % p[:3].upper(),
 print ''
 for i in range(1,11):
@@ -38,7 +35,7 @@ x = np.arange(1, 11)
 for i,v in enumerate(orden):
     axs = ax[i>4,i%5]
     sns.barplot(x, histograma[:,v], palette="BuGn_d", ax=axs)
-    axs.set_title(getPais(v))
+    axs.set_title(paises.items()[v][0])
 
 plt.setp(f.axes, yticks=np.arange(0,1.01,.1), xticks=np.arange(0,11))
 plt.tight_layout(h_pad=2)

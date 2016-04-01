@@ -3,11 +3,9 @@ from math import *
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-import collections
 
 # Inicializo matrices
-probabilidades = np.loadtxt('probabilidades.txt')
-probabilidades = np.reshape(probabilidades.T, (10,10,3), order='F')
+probabilidades = getProbabilidades('probabilidades.txt')
 puntajesIniciales = getPuntajesIniciales()
 
 # Corro simulaciones
