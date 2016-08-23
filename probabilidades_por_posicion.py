@@ -6,16 +6,16 @@ import seaborn as sns
 
 # Inicializo matrices
 probabilidades = getProbabilidades('probabilidades.txt')
-puntajesIniciales = getPuntajesIniciales()
+puntajesIniciales = getPuntajesIniciales(6)
 
 # Corro simulacion
-histograma = simulacion(puntajesIniciales, probabilidades, 20000)
+histograma = getHistogramaPosiciones(puntajesIniciales, probabilidades, 200)
 
 # Imprimo histograma
 np.set_printoptions(precision=2)
 np.set_printoptions(suppress=True)
 print '      ',
-for p in paises:
+for p in PAISES:
     print  '%s  ' % p[:3].upper(),
 print ''
 for i in range(1,11):
@@ -35,7 +35,7 @@ x = np.arange(1, 11)
 for i,v in enumerate(orden):
     axs = ax[i>4,i%5]
     sns.barplot(x, histograma[:,v], palette="BuGn_d", ax=axs)
-    axs.set_title(paises.items()[v][0])
+    axs.set_title(PAISES.items()[v][0])
 
 plt.setp(f.axes, yticks=np.arange(0,1.01,.1), xticks=np.arange(0,11))
 plt.tight_layout(h_pad=2)

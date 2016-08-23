@@ -6,7 +6,7 @@ import seaborn as sns
 
 # Inicializo matrices
 probabilidades = getProbabilidades('probabilidades.txt')
-puntajesIniciales = getPuntajesIniciales()
+puntajesIniciales = getPuntajesIniciales(6)
 
 # Corro simulaciones
 cantidad_iteraciones = 20;
@@ -14,7 +14,7 @@ cantidad_iteraciones = 20;
 todos_histogramas = np.zeros((cantidad_iteraciones,10,10))
 for i in range(0,cantidad_iteraciones):
     print i
-    histograma = simulacion(puntajesIniciales, probabilidades, 20000)
+    histograma = getHistogramaPosiciones(puntajesIniciales, probabilidades, 20000)
     todos_histogramas[i]=histograma
 
 np.set_printoptions(precision=3)
