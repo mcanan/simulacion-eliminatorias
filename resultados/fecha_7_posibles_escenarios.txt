@@ -1,0 +1,97 @@
+Situacion actual
+        ARG   BOL   BRA   CHI   COL   ECU   PAR   PER   URU   VEN   
+ <=5 [ 0.91  0.    0.86  0.77  0.49  0.9   0.32  0.    0.74  0.01]
+ <=4 [ 0.81  0.    0.72  0.62  0.31  0.79  0.19  0.    0.56  0.  ]
+Simulacion
+Bolivia Peru [3 0]
+        ARG   BOL   BRA   CHI   COL   ECU   PAR   PER   URU   VEN   
+ <=5 [ 0.    0.    0.    0.01  0.    0.    0.    0.    0.    0.  ]
+ <=4 [ 0.    0.    0.    0.    0.   -0.01  0.    0.    0.    0.  ]
+Bolivia Peru [0 3]
+        ARG   BOL   BRA   CHI   COL   ECU   PAR   PER   URU   VEN   
+ <=5 [ 0.    0.    0.    0.    0.   -0.01  0.    0.01  0.    0.  ]
+ <=4 [ 0.    0.    0.01 -0.01  0.    0.    0.    0.   -0.01  0.  ]
+Bolivia Peru [1 1]
+        ARG   BOL   BRA   CHI   COL   ECU   PAR   PER   URU   VEN   
+ <=5 [ 0.    0.    0.    0.    0.    0.    0.    0.   -0.01  0.  ]
+ <=4 [ 0.    0.    0.01 -0.01  0.    0.    0.    0.    0.    0.  ]
+Colombia Venezuela [3 0]
+        ARG   BOL   BRA   CHI   COL   ECU   PAR   PER   URU   VEN   
+ <=5 [-0.02  0.   -0.02 -0.02  0.16 -0.03 -0.03  0.   -0.04 -0.01]
+ <=4 [-0.02  0.   -0.02 -0.03  0.15 -0.03 -0.02  0.   -0.03  0.  ]
+Colombia Venezuela [0 3]
+        ARG   BOL   BRA   CHI   COL   ECU   PAR   PER   URU   VEN   
+ <=5 [ 0.01  0.    0.02  0.03 -0.12  0.01  0.01  0.    0.02  0.01]
+ <=4 [ 0.01  0.    0.03  0.02 -0.11  0.01  0.01  0.    0.02  0.01]
+Colombia Venezuela [1 1]
+        ARG   BOL   BRA   CHI   COL   ECU   PAR   PER   URU   VEN   
+ <=5 [ 0.    0.    0.01  0.01 -0.03  0.    0.    0.    0.01  0.  ]
+ <=4 [ 0.    0.    0.01  0.01 -0.04  0.    0.    0.    0.01  0.  ]
+Ecuador Brasil [3 0]
+        ARG   BOL   BRA   CHI   COL   ECU   PAR   PER   URU   VEN   
+ <=5 [ 0.    0.   -0.04  0.    0.    0.05 -0.01  0.   -0.01  0.  ]
+ <=4 [ 0.    0.   -0.06  0.    0.    0.08 -0.01  0.   -0.01  0.  ]
+Ecuador Brasil [0 3]
+        ARG   BOL   BRA   CHI   COL   ECU   PAR   PER   URU   VEN   
+ <=5 [ 0.    0.    0.1   0.    0.   -0.1  -0.01  0.    0.    0.  ]
+ <=4 [ 0.    0.    0.17  0.    0.   -0.16 -0.01  0.    0.    0.  ]
+Ecuador Brasil [1 1]
+        ARG   BOL   BRA   CHI   COL   ECU   PAR   PER   URU   VEN   
+ <=5 [ 0.    0.    0.03  0.01  0.01 -0.03 -0.01  0.    0.    0.  ]
+ <=4 [ 0.    0.    0.04  0.    0.01 -0.06 -0.01  0.    0.01  0.  ]
+Argentina Uruguay [3 0]
+        ARG   BOL   BRA   CHI   COL   ECU   PAR   PER   URU   VEN   
+ <=5 [ 0.02  0.    0.    0.01  0.    0.   -0.01  0.   -0.03  0.  ]
+ <=4 [ 0.04  0.    0.    0.    0.    0.    0.    0.   -0.04  0.  ]
+Argentina Uruguay [0 3]
+        ARG   BOL   BRA   CHI   COL   ECU   PAR   PER   URU   VEN   
+ <=5 [-0.14  0.    0.   -0.01 -0.01 -0.01 -0.01  0.    0.17  0.  ]
+ <=4 [-0.22  0.    0.01 -0.01 -0.01 -0.01 -0.01  0.    0.24  0.  ]
+Argentina Uruguay [1 1]
+        ARG   BOL   BRA   CHI   COL   ECU   PAR   PER   URU   VEN   
+ <=5 [-0.07  0.    0.    0.01  0.    0.   -0.01  0.    0.05  0.  ]
+ <=4 [-0.11  0.    0.01  0.01  0.01  0.    0.    0.    0.08  0.  ]
+Paraguay Chile [3 0]
+        ARG   BOL   BRA   CHI   COL   ECU   PAR   PER   URU   VEN   
+ <=5 [ 0.    0.    0.   -0.16  0.   -0.01  0.18  0.   -0.01  0.  ]
+ <=4 [ 0.01  0.    0.02 -0.19  0.01  0.01  0.14  0.    0.01  0.  ]
+Paraguay Chile [0 3]
+        ARG   BOL   BRA   CHI   COL   ECU   PAR   PER   URU   VEN   
+ <=5 [ 0.    0.    0.01  0.11  0.    0.   -0.11  0.    0.    0.  ]
+ <=4 [-0.01  0.    0.    0.12  0.   -0.01 -0.09  0.   -0.01  0.  ]
+Paraguay Chile [1 1]
+        ARG   BOL   BRA   CHI   COL   ECU   PAR   PER   URU   VEN   
+ <=5 [ 0.    0.    0.01 -0.03  0.02  0.   -0.01  0.    0.01  0.  ]
+ <=4 [ 0.01  0.    0.02 -0.07  0.02  0.01 -0.02  0.    0.02  0.  ]
+Uruguay posibilidades 4
+Bolivia Peru [3 0] 0.0
+Bolivia Peru [0 3] -0.01
+Bolivia Peru [1 1] 0.0
+Colombia Venezuela [3 0] -0.03
+Colombia Venezuela [0 3] 0.02
+Colombia Venezuela [1 1] 0.01
+Ecuador Brasil [3 0] -0.01
+Ecuador Brasil [0 3] 0.0
+Ecuador Brasil [1 1] 0.01
+Argentina Uruguay [3 0] -0.04
+Argentina Uruguay [0 3] 0.24
+Argentina Uruguay [1 1] 0.08
+Paraguay Chile [3 0] 0.01
+Paraguay Chile [0 3] -0.01
+Paraguay Chile [1 1] 0.02
+Uruguay posibilidades 5
+Bolivia Peru [3 0] 0.0
+Bolivia Peru [0 3] -0.01
+Bolivia Peru [1 1] 0.0
+Colombia Venezuela [3 0] -0.03
+Colombia Venezuela [0 3] 0.02
+Colombia Venezuela [1 1] 0.01
+Ecuador Brasil [3 0] -0.01
+Ecuador Brasil [0 3] 0.0
+Ecuador Brasil [1 1] 0.01
+Argentina Uruguay [3 0] -0.04
+Argentina Uruguay [0 3] 0.24
+Argentina Uruguay [1 1] 0.08
+Paraguay Chile [3 0] 0.01
+Paraguay Chile [0 3] -0.01
+Paraguay Chile [1 1] 0.02
