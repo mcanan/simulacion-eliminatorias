@@ -209,5 +209,11 @@ class TestSimulacion(unittest.TestCase):
         p = np.array([11, 3, 9, 10, 10, 13, 9, 4, 13, 1])
         np.testing.assert_equal(puntajes_total, p)
 
+        puntajes = getPuntajesIniciales(7)
+        no_jugados = getPartidosNoJugados(puntajes)
+        self.assertEqual(no_jugados[0].size, 55)
+        puntajes_total = np.sum(puntajes, axis=1)[:,0] + np.sum(puntajes, axis=0)[:,1]
+        p = np.array([14, 6, 12, 10, 13, 13, 12, 4, 13, 1])
+        np.testing.assert_equal(puntajes_total, p)
 if __name__ == '__main__':
     unittest.main()

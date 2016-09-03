@@ -5,10 +5,15 @@ from simulacion import *
 probabilidades = getProbabilidades('probabilidades.txt')
 puntos = np.arange(5,43)
 
-sum_z1 = np.zeros((len(PAISES)), dtype=np.float)
-sum_z2 = np.zeros((len(PAISES)), dtype=np.float)
-sum_z3 = np.zeros((len(PAISES)), dtype=np.float)
-for fecha in range(7): # 7
+#sum_z1 = np.zeros((len(PAISES)), dtype=np.float)
+#sum_z2 = np.zeros((len(PAISES)), dtype=np.float)
+#sum_z3 = np.zeros((len(PAISES)), dtype=np.float)
+sum_z1 = np.array([0.81, 0.00, 0.73, 0.62, 0.31, 0.79, 0.19, 0.00, 0.56, 0.00])
+sum_z2 = np.array([0.10, 0.00, 0.14, 0.16, 0.18, 0.11, 0.12, 0.00, 0.18, 0.01])
+sum_z3 = np.array([0.09, 1.00, 0.13, 0.22, 0.51, 0.10, 0.69, 1.00, 0.26, 0.99])
+print sum_z1 + sum_z2 + sum_z3
+
+for fecha in range(7,8): # 7
     # Inicializo matrices
     puntajes = getPuntajesIniciales(fecha)
     hz0, hz1, hz2 = getHistogramaPuntos(puntajes, probabilidades, 100) # Corro con 30000 iteraciones.
@@ -49,4 +54,4 @@ for fecha in range(7): # 7
             rects1 = ax.bar(puntos, (z1+z2+z3)[puntos], 0.8, color="#2ecc71", align='center')
             rects1 = ax.bar(puntos, (z2+z3)[puntos], 0.8, color="#f39c12", align='center')
             rects1 = ax.bar(puntos, z3[puntos], 0.8, color="#e74c3c", align='center')
-            plt.savefig('f'+str(fecha)+'.png', bbox_inches='tight')
+            plt.savefig('f'+str(fecha)+'.png',dpi=72, bbox_inches='tight')

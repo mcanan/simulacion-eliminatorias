@@ -5,11 +5,11 @@ import numpy as np
 probabilidades = getProbabilidades('probabilidades.txt')
 
 partidosFecha = np.array([
-    [PAISES["Bolivia"],PAISES["Peru"]],
-    [PAISES["Colombia"],PAISES["Venezuela"]],
-    [PAISES["Ecuador"],PAISES["Brasil"]],
-    [PAISES["Argentina"],PAISES["Uruguay"]],
-    [PAISES["Paraguay"],PAISES["Chile"]]
+    [PAISES["Uruguay"],PAISES["Paraguay"]],
+    [PAISES["Venezuela"],PAISES["Argentina"]],
+    [PAISES["Brasil"],PAISES["Colombia"]],
+    [PAISES["Chile"],PAISES["Bolivia"]],
+    [PAISES["Peru"],PAISES["Ecuador"]]
     ]);
 
 # Imprimo probabilidades
@@ -26,7 +26,7 @@ def imprimo_histograma(p5, p4):
         print " <=4", p4
 
 iteraciones = 30000
-puntajes = getPuntajesIniciales(6)
+puntajes = getPuntajesIniciales(7)
 histograma = getHistogramaPosiciones(puntajes, probabilidades, iteraciones)
 p5_actual = np.round(np.sum(histograma[:5,:], axis=0), decimals=2)
 p4_actual = np.round(np.sum(histograma[:4,:], axis=0), decimals=2)
@@ -41,7 +41,7 @@ i=0
 for partido in partidosFecha:
     for resultado in POSIBLES_RESULTADOS:
         print PAISES.items()[partido[0]][0], PAISES.items()[partido[1]][0], resultado
-        puntajes = getPuntajesIniciales(6)
+        puntajes = getPuntajesIniciales(7)
         puntajes[partido[0],partido[1]] = resultado
         
         # Corro simulacion
@@ -64,5 +64,5 @@ print 'Uruguay posibilidades 5'
 i=0
 for partido in partidosFecha:
     for resultado in POSIBLES_RESULTADOS:
-        print PAISES.items()[partido[0]][0], PAISES.items()[partido[1]][0], resultado, p4_todas[i,8]
+        print PAISES.items()[partido[0]][0], PAISES.items()[partido[1]][0], resultado, p5_todas[i,8]
         i=i+1
