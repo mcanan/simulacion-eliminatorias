@@ -8,15 +8,15 @@ puntos = np.arange(5,43)
 #sum_z1 = np.zeros((len(PAISES)), dtype=np.float)
 #sum_z2 = np.zeros((len(PAISES)), dtype=np.float)
 #sum_z3 = np.zeros((len(PAISES)), dtype=np.float)
-sum_z1 = np.array([0.81, 0.00, 0.73, 0.62, 0.31, 0.79, 0.19, 0.00, 0.56, 0.00])
-sum_z2 = np.array([0.10, 0.00, 0.14, 0.16, 0.18, 0.11, 0.12, 0.00, 0.18, 0.01])
-sum_z3 = np.array([0.09, 1.00, 0.13, 0.22, 0.51, 0.10, 0.69, 1.00, 0.26, 0.99])
+sum_z1 = np.array([0.84, 0.00, 0.97, 0.29, 0.40, 0.53, 0.29, 0.00, 0.67, 0.00])
+sum_z2 = np.array([0.08, 0.00, 0.02, 0.19, 0.19, 0.18, 0.17, 0.00, 0.15, 0.00])
+sum_z3 = np.array([0.08, 1.00, 0.01, 0.52, 0.41, 0.29, 0.54, 1.00, 0.18, 1.00])
 print sum_z1 + sum_z2 + sum_z3
 
-for fecha in range(7,8): # 7
+for fecha in range(9,10): # 9
     # Inicializo matrices
     puntajes = getPuntajesIniciales(fecha)
-    hz0, hz1, hz2 = getHistogramaPuntos(puntajes, probabilidades, 100) # Corro con 30000 iteraciones.
+    hz0, hz1, hz2 = getHistogramaPuntos(puntajes, probabilidades, 30000) # Corro con 30000 iteraciones.
 
     # Grafico
     plt.style.use('ggplot')
