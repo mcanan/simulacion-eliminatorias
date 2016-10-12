@@ -8,12 +8,14 @@ puntos = np.arange(5,43)
 #sum_z1 = np.zeros((len(PAISES)), dtype=np.float)
 #sum_z2 = np.zeros((len(PAISES)), dtype=np.float)
 #sum_z3 = np.zeros((len(PAISES)), dtype=np.float)
-sum_z1 = np.array([0.84, 0.00, 0.97, 0.29, 0.40, 0.53, 0.29, 0.00, 0.67, 0.00])
-sum_z2 = np.array([0.08, 0.00, 0.02, 0.19, 0.19, 0.18, 0.17, 0.00, 0.15, 0.00])
-sum_z3 = np.array([0.08, 1.00, 0.01, 0.52, 0.41, 0.29, 0.54, 1.00, 0.18, 1.00])
+sum_z1 = np.array([0.78, 0.00, 0.98, 0.21, 0.42, 0.55, 0.22, 0.00, 0.84, 0.00])
+sum_z2 = np.array([0.12, 0.00, 0.01, 0.18, 0.22, 0.20, 0.17, 0.00, 0.09, 0.00])
+sum_z3 = np.array([0.10, 1.00, 0.01, 0.61, 0.36, 0.25, 0.61, 1.00, 0.07, 1.00])
 print sum_z1 + sum_z2 + sum_z3
-
-for fecha in range(9,10): # 9
+print np.sum(sum_z1)
+print np.sum(sum_z2)
+print np.sum(sum_z3)
+for fecha in range(10,11): # 10
     # Inicializo matrices
     puntajes = getPuntajesIniciales(fecha)
     hz0, hz1, hz2 = getHistogramaPuntos(puntajes, probabilidades, 30000) # Corro con 30000 iteraciones.
