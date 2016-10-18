@@ -3,12 +3,15 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+fecha = 0
+cantidad_simulaciones = 30000
+
 # Inicializo matrices
 probabilidades = getProbabilidades('probabilidades.txt')
-puntajes = getPuntajesIniciales(6)
+puntajes = getPuntajesIniciales(fecha)
 
 # Corro simulacion
-histograma = getHistogramaPosiciones(puntajes, probabilidades, 200)
+histograma = getHistogramaPosiciones(puntajes, probabilidades, cantidad_simulaciones)
 
 # Suma las probabilidades de estar en los primeros 5 puestos
 probabilidades_5_primeros = np.sum(histograma[:5,:], axis=0)
