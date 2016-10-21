@@ -1,35 +1,26 @@
 from simulacion import *
 import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
+import pandas as pd
+import csv
 
 # Inicializo matrices
-probabilidades = getProbabilidades('utils/probabilidades_test.txt')
-puntajes = getPuntajesIniciales(6)
-
-np.set_printoptions(precision=2)
-np.set_printoptions(suppress=True)
+probabilidades = getProbabilidades('probabilidades.txt')
+df = pd.DataFrame()
 
 # Corro simulacion
-hz0, hz1, hz2 = getHistogramaPuntos(puntajes, probabilidades, 100)
-RANGO_PUNTOS = np.arange(5,45)
-f=open('asd.dat','a')
-for pais in PAISES.items():
-    i = pais[1]
-    htotal=hz0[i]+hz1[i]+hz2[i]
-    z1 = np.divide(hz0[i], np.sum(htotal), dtype=float)
-    z2 = np.divide(hz1[i], np.sum(htotal), dtype=float)
-    z3 = np.divide(hz2[i], np.sum(htotal), dtype=float)
-    p = np.divide(htotal, np.sum(htotal), dtype=float)
-    # print z1[RANGO_PUNTOS]
-    print z1.size
-    
-
-    np.savetxt(f,z1.T,delimiter=",")
-f.close()
-
-a = np.asarray([ [1,2,3], [4,5,6], [7,8,9] ])
-np.savetxt("foo.csv", a, delimiter=",")
+for fecha in np.arange(0,11):
+    puntajes = getPuntajesIniciales(fecha)
+    hz0, hz1, hz2 = getHistogramaPuntos(puntajes, probabilidades, 20000)
+    for pais in PAISES.items():
+        i = pais[1]
+        htotal=hz0[i]+hz1[i]+hz2[i]
+        z1 = np.divide(hz0[i], np.sum(htotal), dtype=float)
+        z2 = np.divide(hz1[i], np.sum(htotal), dtype=float)
+        z3 = np.divide(hz2[i], np.sum(htotal), dtype=float)
+        p = np.divide(htotal, np.sum(htotal), dtype=float)
+        for i in np.arange(0,99):
+            if (z1[i]+z2[i]+z3[i]>0):
+                print "%s,%s,%s,%s,%s,%s" % (fecha,pais[1],i,z1[i],z2[i],z3[i])
 
 #puntos = hz0[1][np.nonzero(htotal)]
 #z1 = np.divide(hz0[0][np.nonzero(htotal)],htotal[np.nonzero(htotal)], dtype=float)
