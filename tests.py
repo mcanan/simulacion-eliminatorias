@@ -209,32 +209,33 @@ class TestSimulacion(unittest.TestCase):
         p = np.array([11, 3, 9, 10, 10, 13, 9, 4, 13, 1])
         np.testing.assert_equal(puntajes_total, p)
 
+        # ARG BOL BRA CHI COL ECU PAR PER URU VEN
         puntajes = getPuntajesIniciales(7)
         no_jugados = getPartidosNoJugados(puntajes)
         self.assertEqual(no_jugados[0].size, 55)
         puntajes_total = np.sum(puntajes, axis=1)[:,0] + np.sum(puntajes, axis=0)[:,1]
-        p = np.array([14, 6, 12, 10, 13, 13, 12, 4, 13, 1])
+        p = np.array([14, 3, 12, 10, 13, 13, 12, 7, 13, 1])
         np.testing.assert_equal(puntajes_total, p)
         
         puntajes = getPuntajesIniciales(8)
         no_jugados = getPartidosNoJugados(puntajes)
         self.assertEqual(no_jugados[0].size, 50)
         puntajes_total = np.sum(puntajes, axis=1)[:,0] + np.sum(puntajes, axis=0)[:,1]
-        p = np.array([15, 7, 15, 11, 13, 13, 12, 7, 16, 2])
+        p = np.array([15, 3, 15, 13, 13, 13, 12, 10, 16, 2])
         np.testing.assert_equal(puntajes_total, p)
         
         puntajes = getPuntajesIniciales(9)
         no_jugados = getPartidosNoJugados(puntajes)
         self.assertEqual(no_jugados[0].size, 45)
         puntajes_total = np.sum(puntajes, axis=1)[:,0] + np.sum(puntajes, axis=0)[:,1]
-        p = np.array([16, 7, 18, 11, 16, 16, 12, 8, 19, 2])
+        p = np.array([16, 3, 18, 13, 16, 16, 12, 11, 19, 2])
         np.testing.assert_equal(puntajes_total, p)
         
         puntajes = getPuntajesIniciales(10)
         no_jugados = getPartidosNoJugados(puntajes)
         self.assertEqual(no_jugados[0].size, 40)
         puntajes_total = np.sum(puntajes, axis=1)[:,0] + np.sum(puntajes, axis=0)[:,1]
-        p = np.array([16, 8, 21, 14, 17, 17, 15, 8, 20, 2])
+        p = np.array([16, 4, 21, 16, 17, 17, 15, 11, 20, 2])
         np.testing.assert_equal(puntajes_total, p)
 if __name__ == '__main__':
     unittest.main()

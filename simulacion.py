@@ -185,7 +185,7 @@ def getPartidosJugados():
     partidos[PAISES["Paraguay"],PAISES["Brasil"]]=[6,2,2]
 
     # Fecha 7
-    partidos[PAISES["Bolivia"],PAISES["Peru"]]=[7,2,0]
+    partidos[PAISES["Bolivia"],PAISES["Peru"]]=[7,0,3]
     partidos[PAISES["Colombia"],PAISES["Venezuela"]]=[7,2,0]
     partidos[PAISES["Ecuador"],PAISES["Brasil"]]=[7,0,3]
     partidos[PAISES["Argentina"],PAISES["Uruguay"]]=[7,1,0]
@@ -195,7 +195,7 @@ def getPartidosJugados():
     partidos[PAISES["Uruguay"],PAISES["Paraguay"]]=[8,4,0]
     partidos[PAISES["Venezuela"],PAISES["Argentina"]]=[8,2,2]
     partidos[PAISES["Brasil"],PAISES["Colombia"]]=[8,2,1]
-    partidos[PAISES["Chile"],PAISES["Bolivia"]]=[8,0,0]
+    partidos[PAISES["Chile"],PAISES["Bolivia"]]=[8,3,0]
     partidos[PAISES["Peru"],PAISES["Ecuador"]]=[8,2,1]
 
     # Fecha 9
