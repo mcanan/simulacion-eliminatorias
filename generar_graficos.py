@@ -15,7 +15,7 @@ print sum_z1 + sum_z2 + sum_z3
 print np.sum(sum_z1)
 print np.sum(sum_z2)
 print np.sum(sum_z3)
-for fecha in range(10,11): # 10
+for fecha in range(11,12): # 10
     # Inicializo matrices
     puntajes = getPuntajesIniciales(fecha)
     hz0, hz1, hz2 = getHistogramaPuntos(puntajes, probabilidades, 30000) # Corro con 30000 iteraciones.
