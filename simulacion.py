@@ -218,4 +218,12 @@ def getPartidosJugados():
     partidos[PAISES["Paraguay"],PAISES["Peru"]]=[11,1,4]
     partidos[PAISES["Venezuela"],PAISES["Bolivia"]]=[11,5,0]
     partidos[PAISES["Brasil"],PAISES["Argentina"]]=[11,3,0]
+    
+    # Fecha 12
+    partidos[PAISES["Bolivia"],PAISES["Paraguay"]]=[12,1,0]
+    partidos[PAISES["Ecuador"],PAISES["Venezuela"]]=[12,3,0]
+    partidos[PAISES["Chile"],PAISES["Uruguay"]]=[12,3,1]
+    partidos[PAISES["Argentina"],PAISES["Colombia"]]=[12,3,0]
+    partidos[PAISES["Peru"],PAISES["Brasil"]]=[12,0,2]
+
     return partidos
