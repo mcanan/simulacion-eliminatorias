@@ -3,6 +3,12 @@ from simulacion import *
 
 class TestSimulacion(unittest.TestCase):
 
+    def test_sum1(self):
+        probabilidades = getProbabilidades('probabilidades.txt')
+        test = np.ones((10,10)) - np.identity(10)
+        tmp = np.round(np.sum(probabilidades, axis=2),5)
+        np.testing.assert_equal(tmp, test)
+
     def test_getProbabilidades(self):
         probabilidades = getProbabilidades('tests/test_probabilidades.txt')
         p0 = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
