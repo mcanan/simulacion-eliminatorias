@@ -5,11 +5,11 @@ import numpy as np
 probabilidades = getProbabilidades('probabilidades.txt')
 
 partidosFecha = np.array([
-    [PAISES["Brasil"],PAISES["Ecuador"]],
-    [PAISES["Uruguay"],PAISES["Argentina"]],
-    [PAISES["Venezuela"],PAISES["Colombia"]],
-    [PAISES["Chile"],PAISES["Paraguay"]],
-    [PAISES["Peru"],PAISES["Bolivia"]]
+    [PAISES["Bolivia"],PAISES["Chile"]],
+    [PAISES["Colombia"],PAISES["Brasil"]],
+    [PAISES["Ecuador"],PAISES["Peru"]],
+    [PAISES["Argentina"],PAISES["Venezuela"]],
+    [PAISES["Paraguay"],PAISES["Uruguay"]]
     ]);
 
 # Imprimo probabilidades
@@ -26,7 +26,7 @@ def imprimo_histograma(p5, p4):
         print " <=4", p4
 
 iteraciones = 30000
-ultima_fecha_jugada = 14
+ultima_fecha_jugada = 15
 
 puntajes = getPuntajesIniciales(ultima_fecha_jugada)
 histograma = getHistogramaPosiciones(puntajes, probabilidades, iteraciones)
