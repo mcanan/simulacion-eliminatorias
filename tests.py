@@ -282,5 +282,21 @@ class TestSimulacion(unittest.TestCase):
         p = np.array([23, 10, 36, 23, 25, 20, 21, 21, 24, 7])
         np.testing.assert_equal(puntajes_total, p)
         # ARG BOL BRA CHI COL ECU PAR PER URU VEN
+        
+        puntajes = getPuntajesIniciales(16)
+        no_jugados = getPartidosNoJugados(puntajes)
+        self.assertEqual(no_jugados[0].size, 10)
+        puntajes_total = np.sum(puntajes, axis=1)[:,0] + np.sum(puntajes, axis=0)[:,1]
+        p = np.array([24, 13, 37, 23, 26, 20, 21, 24, 27, 8])
+        np.testing.assert_equal(puntajes_total, p)
+        # ARG BOL BRA CHI COL ECU PAR PER URU VEN
+        
+        puntajes = getPuntajesIniciales(17)
+        no_jugados = getPartidosNoJugados(puntajes)
+        self.assertEqual(no_jugados[0].size, 5)
+        puntajes_total = np.sum(puntajes, axis=1)[:,0] + np.sum(puntajes, axis=0)[:,1]
+        p = np.array([25, 14, 38, 26, 26, 20, 24, 25, 28, 9])
+        np.testing.assert_equal(puntajes_total, p)
+        # ARG BOL BRA CHI COL ECU PAR PER URU VEN
 if __name__ == '__main__':
     unittest.main()

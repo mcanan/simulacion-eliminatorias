@@ -8,7 +8,7 @@ probabilidades = getProbabilidades('probabilidades.txt')
 df = pd.DataFrame()
 
 # Corro simulacion
-for fecha in np.arange(15,16):
+for fecha in np.arange(17,18):
     puntajes = getPuntajesIniciales(fecha)
     hz0, hz1, hz2 = getHistogramaPuntos(puntajes, probabilidades, 30000)
     for pais in PAISES.items():

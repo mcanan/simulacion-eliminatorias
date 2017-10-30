@@ -5,15 +5,16 @@ import numpy as np
 probabilidades = getProbabilidades('probabilidades.txt')
 
 partidosFecha = np.array([
-    [PAISES["Bolivia"],PAISES["Chile"]],
-    [PAISES["Colombia"],PAISES["Brasil"]],
-    [PAISES["Ecuador"],PAISES["Peru"]],
-    [PAISES["Argentina"],PAISES["Venezuela"]],
-    [PAISES["Paraguay"],PAISES["Uruguay"]]
+    [PAISES["Ecuador"],PAISES["Argentina"]],
+    [PAISES["Peru"],PAISES["Colombia"]],
+    [PAISES["Paraguay"],PAISES["Venezuela"]],
+    [PAISES["Brasil"],PAISES["Chile"]],
+    [PAISES["Uruguay"],PAISES["Bolivia"]]
     ]);
 
 # Imprimo probabilidades
-np.set_printoptions(precision=2)
+precision=4
+np.set_printoptions(precision=precision)
 np.set_printoptions(suppress=True)
 
 def imprimo_histograma(p5, p4):
@@ -26,12 +27,12 @@ def imprimo_histograma(p5, p4):
         print " <=4", p4
 
 iteraciones = 30000
-ultima_fecha_jugada = 15
+ultima_fecha_jugada = 17
 
 puntajes = getPuntajesIniciales(ultima_fecha_jugada)
 histograma = getHistogramaPosiciones(puntajes, probabilidades, iteraciones)
-p5_actual = np.round(np.sum(histograma[:5,:], axis=0), decimals=2)
-p4_actual = np.round(np.sum(histograma[:4,:], axis=0), decimals=2)
+p5_actual = np.round(np.sum(histograma[:5,:], axis=0), decimals=precision)
+p4_actual = np.round(np.sum(histograma[:4,:], axis=0), decimals=precision)
 
 print 'Situacion actual'
 imprimo_histograma(p5_actual, p4_actual)
@@ -48,8 +49,8 @@ for partido in partidosFecha:
         
         # Corro simulacion
         histograma = getHistogramaPosiciones(puntajes, probabilidades, iteraciones)
-        p5 = np.round(np.sum(histograma[:5,:], axis=0), decimals=2)
-        p4 = np.round(np.sum(histograma[:4,:], axis=0), decimals=2)
+        p5 = np.round(np.sum(histograma[:5,:], axis=0), decimals=precision)
+        p4 = np.round(np.sum(histograma[:4,:], axis=0), decimals=precision)
         p5_todas[i,:]=p5-p5_actual
         p4_todas[i,:]=p4-p4_actual
         i=i+1
